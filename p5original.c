@@ -2,32 +2,34 @@
 int input()
 {
   int a;
-  printf("enter the number:");
+  printf("Enter the number :\n");
   scanf("%d",&a);
   return a;
 }
-int_gcd(inta,intb)
-{
-  int gcd=1;
-  for(int i=2;i<a&&i<b;i++)
+
+int gcd(int a,int b)
+{ 
+int r;
+  for(int i=1;i<=a && i<=b;i++)
     {
-      if(a%i==0&&b%i==0)
-      {
-        gcd=i;
-      }
+      if(a%i==0 && b%i==0)
+         r=i;
     }
-  return gcd;
+  return r;
 }
-void output(inta,intb,intgcd)
+
+void output(int a,int b,int hcf)
 {
-  printf("gcd of %dand%dis %d\n",a,b,gcd);
+  printf("The H.C.F (G.C.D) of %d and %d is %d",a,b,hcf);
 }
+
 int main()
 {
-  int a,b,gcd;
+  int a,b,hcf;
   a=input();
   b=input();
-  gcd=gcd(a,b);
-  output(a,b,gcd);
-  return0;
+  hcf=gcd(a,b);
+  output(a,b,hcf);
+  return 0;
+  
 }
